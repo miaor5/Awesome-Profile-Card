@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import defaultAvatar from "../../images/mariposa.jpg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultAvatar from '../../images/images.jpg';
 
 function Profile(props) {
-  const photo = props.photo === "" ? defaultAvatar : props.photo;
+  const photo = props.photo === '' ? defaultAvatar : props.photo;
   return (
     <div
       className="card__image "

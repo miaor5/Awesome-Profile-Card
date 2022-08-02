@@ -23,7 +23,7 @@ function Share(props) {
     } else {
       console.log(props.apiData);
       if (props.apiData.success) {
-        setResult('La tarjeta ha sido creada:');
+        setResult('The card has been created:');
         setErrorMessage('');
         setCollapsedShare('');
       } else {
@@ -39,13 +39,13 @@ function Share(props) {
 
   return (
     <>
-      <fieldset className='thirdFieldset'>
+      <fieldset className="thirdFieldset">
         <h3
           onClick={props.handleClickShare}
-          className='thirdFieldset__legend js-titleShare'
-          id='share'
+          className="thirdFieldset__legend js-titleShare"
+          id="share"
         >
-          <i className='fa-solid fa-share-nodes'></i>Comparte
+          <i className="fa-solid fa-share-nodes"></i>Share
           <i
             className={`fa-solid fa-angle-up ${
               props.collapseShare ? 'rotate' : ''
@@ -58,33 +58,33 @@ function Share(props) {
           } js-thirdFieldset`}
         >
           <button
-            className='thirdFieldset__button js-thirdFieldset__button js_create_button'
-            title='Crear tarjeta'
+            className="thirdFieldset__button js-thirdFieldset__button js_create_button"
+            title="Crear tarjeta"
             onClick={handleCollapsedShare}
           >
-            <i className='fa-regular fa-address-card'></i>Crear tarjeta
+            <i className="fa-regular fa-address-card"></i>Create card
           </button>
         </div>
       </fieldset>
-      <fieldset className='fourFieldset'>
-        <p className='fourFieldset__link js_url_card'>{errorMessage}</p>
+      <fieldset className="fourFieldset">
+        <p className="fourFieldset__link js_url_card">{errorMessage}</p>
         <div className={`js-fourFieldset ${collapsedShare}`}>
-          <p className='fourFieldset__link js_url_card'>{result}</p>
+          <p className="fourFieldset__link js_url_card">{result}</p>
           <a
             href={props.apiData?.cardURL}
-            target='_blank'
-            rel='noreferrer'
-            title='Haz click para ir a la tarjeta creada'
-            className='fourFieldset__link js_url_card'
+            target="_blank"
+            rel="noreferrer"
+            title="Click to go to the created card"
+            className="fourFieldset__link js_url_card"
           >
             {props.apiData?.cardURL}
           </a>
           <button
-            className='fourFieldset__button js-twitterButton'
-            title='Compartir en twitter'
+            className="fourFieldset__button js-twitterButton"
+            title="Compartir en twitter"
             onClick={twitterShare}
           >
-            <i className='fa-brands fa-twitter'></i>Compartir en twitter
+            <i className="fa-brands fa-twitter"></i>Share on twitter
           </button>
         </div>
       </fieldset>

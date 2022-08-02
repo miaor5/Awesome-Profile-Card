@@ -1,3 +1,6 @@
+body{
+  height: 100vh;
+}
 .main__container {
   display: flex;
   flex-direction: column;
@@ -5,20 +8,23 @@
   text-align: center;
   background-color: $white-four;
   padding: 0 28px;
+  
 
   .main__logo {
     width: 250px;
     height: 63px;
-    margin: 125px 0 35px 0;
+    margin-top: 60px;
+    
     @media all and (min-width: 768px) {
       width: 419px;
       height: 105px;
-      margin: 350px 0 35px 0;
+      
     }
   }
 
   .main__title {
     font-family: $Merriweather;
+    margin-bottom: ;
     font-size: 19px;
     color: $dull-orange;
     text-align: center;

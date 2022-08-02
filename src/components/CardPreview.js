@@ -1,4 +1,4 @@
-import Profile from "./avatar/Profile";
+import Profile from './avatar/Profile';
 
 function CardPreview(props) {
   return (
@@ -9,16 +9,16 @@ function CardPreview(props) {
           href="#"
           onClick={props.handleReset}
         >
-          <i className="far fa-trash-alt"></i> reset
+          <i className="far fa-trash-alt"></i> Reset
         </button>
 
         <div className={`card js-preview palette-${props.dataCard.palette}`}>
           <div className="card__personalInfo personalInfoBorderPalette1 js-borde">
             <p className="card__personalInfo--name js-personalName personalInfoNamePalette1">
-              {props.dataCard.name || "Nombre Apellidos"}
+              {props.dataCard.name || 'Full Name'}
             </p>
             <p className="card__personalInfo--job js-cardJob">
-              {props.dataCard.job || "Front-End developer"}
+              {props.dataCard.job || 'Front-End developer'}
             </p>
           </div>
           <Profile photo={props.photo} />
@@ -39,7 +39,7 @@ function CardPreview(props) {
               <li className="card__rrss">
                 <a
                   className="card__rrss--item rrssPalette1 js-border2 js-iconEmail"
-                  href={`mailto:${props.dataCard.email || "hola@adalab.es"}`}
+                  href={`mailto:${props.dataCard.email || 'hola@adalab.es'}`}
                   target="_blank"
                   rel="noreferrer"
                   title="email address"

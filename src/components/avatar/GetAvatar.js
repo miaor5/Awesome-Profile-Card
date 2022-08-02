@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import defaultAvatar from "../../images/mariposa.jpg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultAvatar from '../../images/images.jpg';
 
 function GetAvatar(props) {
   const fr = new FileReader();
@@ -9,24 +9,24 @@ function GetAvatar(props) {
   const uploadImage = (ev) => {
     if (ev.currentTarget.files.length > 0) {
       const myFile = ev.currentTarget.files[0];
-      fr.addEventListener("load", getImage);
+      fr.addEventListener('load', getImage);
       fr.readAsDataURL(myFile);
     }
   };
 
   const getImage = () => {
     const image = fr.result;
-    props.handleInputChange(image, "photo");
+    props.handleInputChange(image, 'photo');
   };
 
-  const photo = props.photo === "" ? defaultAvatar : props.photo;
+  const photo = props.photo === '' ? defaultAvatar : props.photo;
   return (
     <>
       <label
         htmlFor="photo"
         className="label secondFieldset__button js__profile-trigger"
       >
-        Añadir imagen
+        Add image
       </label>
       <input
         id="photo"
